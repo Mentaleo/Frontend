@@ -36,7 +36,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{height: '80px'}}>
+    <AppBar  sx={{height: '80px'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
