@@ -118,7 +118,7 @@ function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: 'block', textAlign: 'center', marginLeft: '20px' }}
+                sx={{ my: 2, color: 'white', display: 'block', textAlign: 'center', marginLeft: '20px' }}
               >
                 {page}
               </Button>

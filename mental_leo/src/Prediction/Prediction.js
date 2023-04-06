@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
@@ -8,9 +9,10 @@ import Radio from "@material-ui/core/Radio";
 import Button from "@material-ui/core/Button";
 
 const defaultValues = {
+    age: 0,
+    gender: "",
     work_interfere: "",
     family_history: "",
-    gender: "",
     care_options: "",
     benefits:"",
     obs_consequence:"",
@@ -35,8 +37,19 @@ const Prediction = () => {
         console.log(formValues);
     };
     return (
+        <div><h1>WELCOME TO THE PREDICTION PAGE</h1>
         <form onSubmit={handleSubmit}>
             <Grid container alignItems="center" justify="center" direction="column">
+                <Grid item>
+                    <TextField
+                        id="age-input"
+                        name="age"
+                        label="Age"
+                        type="number"
+                        value={formValues.age}
+                        onChange={handleInputChange}
+                    />
+                </Grid>
                 <Grid item>
                     <FormControl>
                         <FormLabel>Gender</FormLabel>
@@ -351,6 +364,7 @@ const Prediction = () => {
                 </Button>
             </Grid>
         </form>
+        </div>
     );
 };
 export default Prediction;
