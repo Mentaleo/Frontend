@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Placeholder 
+      {/* <Placeholder 
        imageSrc={homepageImage}
        imageAlt="Placeholder Image"
-      />
+      /> */}
     </div>
   );
 }
