@@ -111,7 +111,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+           Mental Health
           </Typography>
           <Box sx={{ flexGrow: 4, display: { xs: 'none', md: 'flex', alignItems:'center',marginLeft:'10px' }}}>
             {pages.map((page) => (

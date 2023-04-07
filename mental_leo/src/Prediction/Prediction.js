@@ -21,7 +21,6 @@ const defaultValues = {
     wellness_program:"",
     seek_help:"",
 };
-
 const Prediction = () => {
     const [formValues, setFormValues] = useState(defaultValues);
     const handleInputChange = (e) => {
@@ -37,10 +36,9 @@ const Prediction = () => {
         console.log(formValues);
     };
     return (
-        <body backgroundColor='#14212e'>
-        <div><h1><b>WELCOME TO THE PREDICTION PAGE</b></h1>
+        <div background-color="#9b1b6a"><h1><b>WELCOME TO THE PREDICTION PAGE</b></h1>
             <form onSubmit={handleSubmit} >
-                <Grid container alignItems="center"  direction="column">
+                <Grid container alignItems="center" justifyContent="center"  direction="column">
                 <Grid item position="left">
                     <TextField
                         id="age-input"
@@ -366,7 +364,6 @@ const Prediction = () => {
             </Grid>
         </form>
         </div>
-        </body>
     );
 };
 export default Prediction;
