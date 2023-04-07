@@ -37,10 +37,11 @@ const Prediction = () => {
         console.log(formValues);
     };
     return (
-        <div><h1>WELCOME TO THE PREDICTION PAGE</h1>
-        <form onSubmit={handleSubmit}>
-            <Grid container alignItems="center" justify="center" direction="column">
-                <Grid item>
+        <body backgroundColor='#14212e'>
+        <div><h1><b>WELCOME TO THE PREDICTION PAGE</b></h1>
+            <form onSubmit={handleSubmit} >
+                <Grid container alignItems="center"  direction="column">
+                <Grid item position="left">
                     <TextField
                         id="age-input"
                         name="age"
@@ -365,6 +366,7 @@ const Prediction = () => {
             </Grid>
         </form>
         </div>
+        </body>
     );
 };
 export default Prediction;
