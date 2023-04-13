@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Box from '@mui/material/Box';
 import Grid from "@material-ui/core/Grid";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import TextField from "@material-ui/core/TextField";
@@ -7,6 +8,7 @@ import FormLabel from "@material-ui/core/FormLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import Button from "@material-ui/core/Button";
+
 
 const defaultValues = {
     age: 0,
@@ -35,20 +37,76 @@ const Prediction = () => {
         event.preventDefault();
         console.log(formValues);
     };
+
     return (
         <div style={{ backgroundColor: '#bdbdbd' }}>
             {/* <marquee direction="right" behavior="alternate" width="100%"><h1 style={{ color: "#26c6da", backgroundColor: "#14212e" ,fontFamily:'BlinkMacSystemFont' }}>WELCOME TO THE PREDICTION PAGE </h1></marquee> */}
             <h1 style={{ color: "#26c6da", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::WELCOME TO THE PREDICTION PAGE:: </h1>
+            <div><p style={{ color: "#880e4f", fontSize: "20px", position: "left" }}><u><b>Please Fill The Below Details For Predict Your Mental Health</b></u></p></div>
                 <form onSubmit={handleSubmit} >
                     <Grid container alignItems="center" justifyContent="center"  direction="column" item position="left">
+                    <div>
+                        <p style={{ color: "#14212e", fontSize: "20px",position:"left" }}><b>Name</b></p>
+                        <Box sx={{width:500,maxWidth: '100%',}}>
+                            <TextField fullWidth label="Enter Your Name" />
+                        </Box>
+                        <p style={{ color: "#14212e", fontSize: "20px", position: "left" }}><b>Email ID</b></p>
+                        <Box sx={{ width: 500, maxWidth: '100%', }}>
+                            <TextField fullWidth label="Enter Your Email id" />
+                        </Box>
+                        <p style={{ color: "#14212e", fontSize: "20px", position: "left" }}><b>Age</b></p>
+                        <Box sx={{ width: 500, maxWidth: '100%', }}>
+                            <TextField fullWidth label="Enter Your Age" />
+                        </Box>
+                        <Grid item>
+                            <FormControl>
+                                <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Gender</b></FormLabel>
+                                <RadioGroup
+                                    name="gender"
+                                    value={formValues.gender}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="Male"
+                                        value="Male"
+                                        control={<Radio size="small" />}
+                                        label="Male"
+                                        style={{ color: "#263238", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="Female"
+                                        value="Female"
+                                        control={<Radio size="small" />}
+                                        label="Female"
+                                        style={{ color: "#263238", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="Transgender"
+                                        value="Transgender"
+                                        control={<Radio size="small" />}
+                                        label="Transgender"
+                                        style={{ color: "#263238", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="Prefer Not To Say"
+                                        value="Prefer Not To Say"
+                                        control={<Radio size="small" />}
+                                        label="Prefer Not To Say"
+                                        style={{ color: "#263238", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                    </div>
                         {/* 1st Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>1.Work Interfere</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Work Interfere</b></FormLabel>
                                 <RadioGroup
                                     id="work_interfere"
                                     name="work_interfere"
-                                    value={formValues.work_interfer}
+                                    value={formValues.work_interfere}
                                     onChange={handleInputChange}
                                     row
                                 >
@@ -57,35 +115,35 @@ const Prediction = () => {
                                         value="don't know"
                                         control={<Radio size="small" />}
                                         label="Don't Know"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="never"
                                         value="never"
                                         control={<Radio size="small" />}
                                         label="Never"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="often"
                                         value="often"
                                         control={<Radio size="small" />}
                                         label="Often"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="rarely"
                                         value="rarely"
                                         control={<Radio size="small" />}
                                         label="Rarely"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
-                                        key="rsometimes"
+                                        key="sometimes"
                                         value="sometimes"
                                         control={<Radio size="small" />}
                                         label="Sometimes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -93,7 +151,7 @@ const Prediction = () => {
                         {/* 2nd Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>2.Family History</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Family History</b></FormLabel>
                                 <RadioGroup
                                     id="family_history"
                                     name="family_history"
@@ -106,14 +164,14 @@ const Prediction = () => {
                                         value="yes"
                                         control={<Radio size="small" />}
                                         label="Yes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="no"
                                         value="no"
                                         control={<Radio size="small" />}
                                         label="No"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -121,7 +179,7 @@ const Prediction = () => {
                         {/* 3rd Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>3.Care Options</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Care Options</b></FormLabel>
                                 <RadioGroup
                                     id="care_options"
                                     name="care_options"
@@ -134,21 +192,21 @@ const Prediction = () => {
                                         value="yes"
                                         control={<Radio size="small" />}
                                         label="Yes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="no"
                                         value="no"
                                         control={<Radio size="small" />}
                                         label="No"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="not sure"
                                         value="not sure"
                                         control={<Radio size="small" />}
                                         label="Not Sure"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -156,7 +214,7 @@ const Prediction = () => {
                         {/* 4th Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>4.Benefits</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Benefits</b></FormLabel>
                                 <RadioGroup
                                     id="benefits"
                                     name="benefits"
@@ -169,21 +227,21 @@ const Prediction = () => {
                                         value="yes"
                                         control={<Radio size="small" />}
                                         label="Yes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="no"
                                         value="no"
                                         control={<Radio size="small" />}
                                         label="No"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="don't know"
                                         value="don't know"
                                         control={<Radio size="small" />}
                                         label="Don't Know"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -191,7 +249,7 @@ const Prediction = () => {
                         {/* 5th Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>5.Obs_Consequence</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Obs_Consequence</b></FormLabel>
                                 <RadioGroup
                                     id="obs_consequence"
                                     name="obs_consequence"
@@ -204,14 +262,14 @@ const Prediction = () => {
                                         value="yes"
                                         control={<Radio size="small" />}
                                         label="Yes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="no"
                                         value="no"
                                         control={<Radio size="small" />}
                                         label="No"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -219,7 +277,7 @@ const Prediction = () => {
                         {/* 6th Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>6.Anonymity</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Anonymity</b></FormLabel>
                                 <RadioGroup
                                     id="anonymity"
                                     name="anonymity"
@@ -232,21 +290,21 @@ const Prediction = () => {
                                         value="yes"
                                         control={<Radio size="small" />}
                                         label="Yes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="no"
                                         value="no"
                                         control={<Radio size="small" />}
                                         label="No"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="don't know"
                                         value="don't know"
                                         control={<Radio size="small" />}
                                         label="Don't Know"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -254,7 +312,7 @@ const Prediction = () => {
                         {/* 7th Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>7.Mental Health Interview</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Mental Health Interview</b></FormLabel>
                                 <RadioGroup
                                     id="mental_health_interview"
                                     name="mental_health_interview"
@@ -267,21 +325,21 @@ const Prediction = () => {
                                         value="yes"
                                         control={<Radio size="small" />}
                                         label="Yes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="no"
                                         value="no"
                                         control={<Radio size="small" />}
                                         label="No"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="don't know"
                                         value="don't know"
                                         control={<Radio size="small" />}
                                         label="Don't Know"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -289,7 +347,7 @@ const Prediction = () => {
                         {/* 8th Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>8.Wellness Program</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Wellness Program</b></FormLabel>
                                 <RadioGroup
                                     id="wellness_program"
                                     name="wellness_program"
@@ -302,21 +360,21 @@ const Prediction = () => {
                                         value="yes"
                                         control={<Radio size="small" />}
                                         label="Yes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="no"
                                         value="no"
                                         control={<Radio size="small" />}
                                         label="No"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="don't know"
                                         value="don't know"
                                         control={<Radio size="small" />}
                                         label="Don't Know"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -324,7 +382,7 @@ const Prediction = () => {
                         {/* 9th Feature */}
                         <Grid item>
                             <FormControl>
-                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>9.Seek Help</b></FormLabel>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>Seek Help</b></FormLabel>
                                 <RadioGroup
                                     id="seek_help"
                                     name="seek_help"
@@ -337,21 +395,21 @@ const Prediction = () => {
                                         value="yes"
                                         control={<Radio size="small" />}
                                         label="Yes"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="no"
                                         value="no"
                                         control={<Radio size="small" />}
                                         label="No"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                     <FormControlLabel
                                         key="don't know"
                                         value="don't know"
                                         control={<Radio size="small" />}
                                         label="Don't Know"
-                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                        style={{ color: "#263238", fontSize: "10px" }}
                                     />
                                 </RadioGroup>
                             </FormControl>
