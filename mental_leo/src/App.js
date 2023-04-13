@@ -11,7 +11,7 @@ import Prediction from "./Prediction/Prediction";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar /> 
       <Placeholder imageSrc={homepageImage} imageAlt="Placeholder Image" />
       <Visualization />
       <Prediction />

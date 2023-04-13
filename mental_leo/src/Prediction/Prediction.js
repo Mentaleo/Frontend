@@ -36,332 +36,329 @@ const Prediction = () => {
         console.log(formValues);
     };
     return (
-        <div>
-            <marquee direction="right" behavior="alternate"><h1 style={{ color: "red"}}>WELCOME TO THE PREDICTION PAGE </h1></marquee>
+        <div style={{ backgroundColor: '#bdbdbd' }}>
+            {/* <marquee direction="right" behavior="alternate" width="100%"><h1 style={{ color: "#26c6da", backgroundColor: "#14212e" ,fontFamily:'BlinkMacSystemFont' }}>WELCOME TO THE PREDICTION PAGE </h1></marquee> */}
+            <h1 style={{ color: "#26c6da", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::WELCOME TO THE PREDICTION PAGE:: </h1>
                 <form onSubmit={handleSubmit} >
-                    <Grid container alignItems="center" justifyContent="center"  direction="column">
-                    <Grid item position="left">
-                        <TextField
-                            id="age-input"
-                            name="age"
-                            label="Age"
-                            type="number"
-                            value={formValues.age}
-                            onChange={handleInputChange}
-                        />
-                    </Grid>
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Gender</FormLabel>
-                            <RadioGroup
-                                name="gender"
-                                value={formValues.gender}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="male"
-                                    value="male"
-                                    control={<Radio size="small" />}
-                                    label="Male"
-                                />
-                                <FormControlLabel
-                                    key="female"
-                                    value="female"
-                                    control={<Radio size="small" />}
-                                    label="Female"
-                                />
-                                <FormControlLabel
-                                    key="transgender"
-                                    value="transgender"
-                                    control={<Radio size="small" />}
-                                    label="Transgender"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 1st Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Work Interfere</FormLabel>
-                            <RadioGroup
-                                name="work_interfere"
-                                value={formValues.work_interfer}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="don't know"
-                                    value="don't know"
-                                    control={<Radio size="small" />}
-                                    label="Don't Know"
-                                />
-                                <FormControlLabel
-                                    key="never"
-                                    value="never"
-                                    control={<Radio size="small" />}
-                                    label="Never"
-                                />
-                                <FormControlLabel
-                                    key="often"
-                                    value="often"
-                                    control={<Radio size="small" />}
-                                    label="Often"
-                                />
-                                <FormControlLabel
-                                    key="rarely"
-                                    value="rarely"
-                                    control={<Radio size="small" />}
-                                    label="Rarely"
-                                />
-                                <FormControlLabel
-                                    key="rsometimes"
-                                    value="sometimes"
-                                    control={<Radio size="small" />}
-                                    label="Sometimes"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 2nd Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Family History</FormLabel>
-                            <RadioGroup
-                                name="family_history"
-                                value={formValues.family_history}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="yes"
-                                    value="yes"
-                                    control={<Radio size="small" />}
-                                    label="Yes"
-                                />
-                                <FormControlLabel
-                                    key="no"
-                                    value="no"
-                                    control={<Radio size="small" />}
-                                    label="No"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 3rd Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Care Options</FormLabel>
-                            <RadioGroup
-                                name="care_options"
-                                value={formValues.care_options}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="yes"
-                                    value="yes"
-                                    control={<Radio size="small" />}
-                                    label="Yes"
-                                />
-                                <FormControlLabel
-                                    key="no"
-                                    value="no"
-                                    control={<Radio size="small" />}
-                                    label="No"
-                                />
-                                <FormControlLabel
-                                    key="not sure"
-                                    value="not sure"
-                                    control={<Radio size="small" />}
-                                    label="Not Sure"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 4th Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Benefits</FormLabel>
-                            <RadioGroup
-                                name="benefits"
-                                value={formValues.benefits}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="yes"
-                                    value="yes"
-                                    control={<Radio size="small" />}
-                                    label="Yes"
-                                />
-                                <FormControlLabel
-                                    key="no"
-                                    value="no"
-                                    control={<Radio size="small" />}
-                                    label="No"
-                                />
-                                <FormControlLabel
-                                    key="don't know"
-                                    value="don't know"
-                                    control={<Radio size="small" />}
-                                    label="Don't Know"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 5th Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Obs_Consequence</FormLabel>
-                            <RadioGroup
-                                name="obs_consequence"
-                                value={formValues.obs_consequence}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="yes"
-                                    value="yes"
-                                    control={<Radio size="small" />}
-                                    label="Yes"
-                                />
-                                <FormControlLabel
-                                    key="no"
-                                    value="no"
-                                    control={<Radio size="small" />}
-                                    label="No"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 6th Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Anonymity</FormLabel>
-                            <RadioGroup
-                                name="anonymity"
-                                value={formValues.anonymity}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="yes"
-                                    value="yes"
-                                    control={<Radio size="small" />}
-                                    label="Yes"
-                                />
-                                <FormControlLabel
-                                    key="no"
-                                    value="no"
-                                    control={<Radio size="small" />}
-                                    label="No"
-                                />
-                                <FormControlLabel
-                                    key="don't know"
-                                    value="don't know"
-                                    control={<Radio size="small" />}
-                                    label="Don't Know"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 7th Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Mental Health Interview</FormLabel>
-                            <RadioGroup
-                                name="mental_health_interview"
-                                value={formValues.benefits}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="yes"
-                                    value="yes"
-                                    control={<Radio size="small" />}
-                                    label="Yes"
-                                />
-                                <FormControlLabel
-                                    key="no"
-                                    value="no"
-                                    control={<Radio size="small" />}
-                                    label="No"
-                                />
-                                <FormControlLabel
-                                    key="don't know"
-                                    value="don't know"
-                                    control={<Radio size="small" />}
-                                    label="Don't Know"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 8th Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Wellness Program</FormLabel>
-                            <RadioGroup
-                                name="wellness_program"
-                                value={formValues.wellness_program}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="yes"
-                                    value="yes"
-                                    control={<Radio size="small" />}
-                                    label="Yes"
-                                />
-                                <FormControlLabel
-                                    key="no"
-                                    value="no"
-                                    control={<Radio size="small" />}
-                                    label="No"
-                                />
-                                <FormControlLabel
-                                    key="don't know"
-                                    value="don't know"
-                                    control={<Radio size="small" />}
-                                    label="Don't Know"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    {/* 9th Feature */}
-                    <Grid item>
-                        <FormControl>
-                            <FormLabel>Seek Help</FormLabel>
-                            <RadioGroup
-                                name="seek_help"
-                                value={formValues.seek_help}
-                                onChange={handleInputChange}
-                                row
-                            >
-                                <FormControlLabel
-                                    key="yes"
-                                    value="yes"
-                                    control={<Radio size="small" />}
-                                    label="Yes"
-                                />
-                                <FormControlLabel
-                                    key="no"
-                                    value="no"
-                                    control={<Radio size="small" />}
-                                    label="No"
-                                />
-                                <FormControlLabel
-                                    key="don't know"
-                                    value="don't know"
-                                    control={<Radio size="small" />}
-                                    label="Don't Know"
-                                />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    <Button variant="contained" color="primary" type="submit">
-                        PREDICT
-                    </Button>
+                    <Grid container alignItems="center" justifyContent="center"  direction="column" item position="left">
+                        {/* 1st Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>1.Work Interfere</b></FormLabel>
+                                <RadioGroup
+                                    id="work_interfere"
+                                    name="work_interfere"
+                                    value={formValues.work_interfer}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="don't know"
+                                        value="don't know"
+                                        control={<Radio size="small" />}
+                                        label="Don't Know"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="never"
+                                        value="never"
+                                        control={<Radio size="small" />}
+                                        label="Never"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="often"
+                                        value="often"
+                                        control={<Radio size="small" />}
+                                        label="Often"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="rarely"
+                                        value="rarely"
+                                        control={<Radio size="small" />}
+                                        label="Rarely"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="rsometimes"
+                                        value="sometimes"
+                                        control={<Radio size="small" />}
+                                        label="Sometimes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        {/* 2nd Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>2.Family History</b></FormLabel>
+                                <RadioGroup
+                                    id="family_history"
+                                    name="family_history"
+                                    value={formValues.family_history}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="yes"
+                                        value="yes"
+                                        control={<Radio size="small" />}
+                                        label="Yes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="no"
+                                        value="no"
+                                        control={<Radio size="small" />}
+                                        label="No"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        {/* 3rd Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>3.Care Options</b></FormLabel>
+                                <RadioGroup
+                                    id="care_options"
+                                    name="care_options"
+                                    value={formValues.care_options}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="yes"
+                                        value="yes"
+                                        control={<Radio size="small" />}
+                                        label="Yes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="no"
+                                        value="no"
+                                        control={<Radio size="small" />}
+                                        label="No"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="not sure"
+                                        value="not sure"
+                                        control={<Radio size="small" />}
+                                        label="Not Sure"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        {/* 4th Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>4.Benefits</b></FormLabel>
+                                <RadioGroup
+                                    id="benefits"
+                                    name="benefits"
+                                    value={formValues.benefits}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="yes"
+                                        value="yes"
+                                        control={<Radio size="small" />}
+                                        label="Yes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="no"
+                                        value="no"
+                                        control={<Radio size="small" />}
+                                        label="No"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="don't know"
+                                        value="don't know"
+                                        control={<Radio size="small" />}
+                                        label="Don't Know"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        {/* 5th Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>5.Obs_Consequence</b></FormLabel>
+                                <RadioGroup
+                                    id="obs_consequence"
+                                    name="obs_consequence"
+                                    value={formValues.obs_consequence}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="yes"
+                                        value="yes"
+                                        control={<Radio size="small" />}
+                                        label="Yes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="no"
+                                        value="no"
+                                        control={<Radio size="small" />}
+                                        label="No"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        {/* 6th Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>6.Anonymity</b></FormLabel>
+                                <RadioGroup
+                                    id="anonymity"
+                                    name="anonymity"
+                                    value={formValues.anonymity}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="yes"
+                                        value="yes"
+                                        control={<Radio size="small" />}
+                                        label="Yes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="no"
+                                        value="no"
+                                        control={<Radio size="small" />}
+                                        label="No"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="don't know"
+                                        value="don't know"
+                                        control={<Radio size="small" />}
+                                        label="Don't Know"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        {/* 7th Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>7.Mental Health Interview</b></FormLabel>
+                                <RadioGroup
+                                    id="mental_health_interview"
+                                    name="mental_health_interview"
+                                    value={formValues.mental_health_interview}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="yes"
+                                        value="yes"
+                                        control={<Radio size="small" />}
+                                        label="Yes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="no"
+                                        value="no"
+                                        control={<Radio size="small" />}
+                                        label="No"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="don't know"
+                                        value="don't know"
+                                        control={<Radio size="small" />}
+                                        label="Don't Know"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        {/* 8th Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>8.Wellness Program</b></FormLabel>
+                                <RadioGroup
+                                    id="wellness_program"
+                                    name="wellness_program"
+                                    value={formValues.wellness_program}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="yes"
+                                        value="yes"
+                                        control={<Radio size="small" />}
+                                        label="Yes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="no"
+                                        value="no"
+                                        control={<Radio size="small" />}
+                                        label="No"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="don't know"
+                                        value="don't know"
+                                        control={<Radio size="small" />}
+                                        label="Don't Know"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        {/* 9th Feature */}
+                        <Grid item>
+                            <FormControl>
+                            <FormLabel style={{ color: "#14212e", fontSize: "20px" }}><b>9.Seek Help</b></FormLabel>
+                                <RadioGroup
+                                    id="seek_help"
+                                    name="seek_help"
+                                    value={formValues.seek_help}
+                                    onChange={handleInputChange}
+                                    row
+                                >
+                                    <FormControlLabel
+                                        key="yes"
+                                        value="yes"
+                                        control={<Radio size="small" />}
+                                        label="Yes"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="no"
+                                        value="no"
+                                        control={<Radio size="small" />}
+                                        label="No"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                    <FormControlLabel
+                                        key="don't know"
+                                        value="don't know"
+                                        control={<Radio size="small" />}
+                                        label="Don't Know"
+                                        style={{ color: "#e91e63", fontSize: "10px" }}
+                                    />
+                                </RadioGroup>
+                            </FormControl>
+                        </Grid>
+                        <Button variant="contained" color="primary" type="submit">
+                            PREDICT
+                        </Button>
                 </Grid>
             </form>
         </div>
