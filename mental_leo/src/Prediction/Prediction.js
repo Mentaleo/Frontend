@@ -65,6 +65,10 @@ const Prediction = () => {
                             <Box sx={{ width: 500, maxWidth: '100%' }}>
                                 <TextField fullWidth label="Enter Your Age" />
                             </Box>
+                            <p style={{ color: "#14212e", fontSize: "20px", position: "left" }}><b>Country</b></p>
+                            <Box sx={{ width: 500, maxWidth: '100%' }}>
+                                <TextField fullWidth label="Enter Your Country" />
+                            </Box>
                             <Grid item>
                                 <FormControl>
                                     <FormLabel style={{ color: "#14212e", fontSize: "20px", lineHeight: '2.0' }}><b>Gender</b></FormLabel>
@@ -216,10 +220,10 @@ const Prediction = () => {
                                             style={{ color: "#263238", fontSize: "10px" }}
                                         />
                                         <FormControlLabel
-                                            key="not sure"
-                                            value="not sure"
+                                            key="Don't Know"
+                                            value="Don't Know"
                                             control={<Radio size="small" />}
-                                            label="Not Sure"
+                                            label="Don't Know"
                                             style={{ color: "#263238", fontSize: "10px" }}
                                         />
                                     </RadioGroup>
