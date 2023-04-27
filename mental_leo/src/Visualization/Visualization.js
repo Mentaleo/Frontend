@@ -279,7 +279,7 @@ const countryChartdata4 = [
 function Visualization() {
     return (
         <React.Fragment>
-            <div style={{ backgroundColor: '#bdbdbd' }}>
+            <div style={{ backgroundColor: '#bdbdbd', paddingTop: "10vh" }} id="visualization">
                 
                 <h1 style={{ color: "#26c6da", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::WELCOME TO THE VISUALIZATION PAGE:: </h1>
                     
