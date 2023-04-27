@@ -8,6 +8,7 @@ import FormLabel from "@material-ui/core/FormLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import Button from "@material-ui/core/Button";
+import "./Prediction.css"
 
 
 const defaultValues = {
@@ -49,30 +50,52 @@ const Prediction = () => {
         <div style={{ backgroundColor: '#bdbdbd', paddingTop: "10vh" }} id="prediction">
 
            <h1 style={{ color: "#26c6da", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::WELCOME TO THE PREDICTION PAGE:: </h1>
+
             <div>
-                <p style={{ fontSize: "20px", textAlign: "left" }}><b>
-                    Mental health refers to a person's overall psychological well-being. It includes the ability to manage emotions, cope with stress, maintain healthy relationships, and make decisions that are in line with one's values and goals. Mental health can be affected by a variety of factors, such as genetics, environment, lifestyle, and life experiences. Mental health disorders, such as anxiety, depression, and bipolar disorder, can have a significant impact on a person's mental health and daily functioning. It is important to prioritize mental health and seek support when needed to maintain optimal well-being.
+                <p style={{ fontSize: "15px", textAlign: "left" }}><b>
+                    As technology continues to advance, we believe that there will be more opportunities
+                    to use data and predictive analytics. This will enable us to identify individuals who are at risk of developing mental
+                    health problems. We have analysed various features, such as family history, work interference, seek help, etc, details
+                    of which are listed below as well. We have made a model using these features which will help us to fulfill our goal.<br></br>
+
+                    Our team believes that the future of mental health is bright, with advancements in technology, education, 
+                    and holistic care providing new opportunities for better predicting, preventing, and managing mental illness.
                 </b></p>
                 <div>
                         <p style={{ fontSize: "20px", whiteSpace: "pre-wrap" }}><b>
                             On behalf of this, we can make a prediction of whether a person needs mental treatment or not where depending on 9 special features. The list of features is following:-<br></br>
                         </b></p>
-                        <p style={{ textAlign: "left" }}>
-                            <b> 1. Work_interfere:</b>If you have any mental health condition , do you feel this mental health condition interfered with your ability to work?<br></br>
-                            <b> 2. Family_history:</b> Do you have any family members (such as parents or siblings) who have been diagnosed with a mental health condition?<br></br>
-                            <b> 3. Care_options:</b> Does your employer or organization offer any mental health care option for employees?<br></br>
-                            <b> 4. Benefits:</b> Does your employer or organization offer any mental health benefits to you, such as counselling or therapy services?<br></br>
-                            <b> 5. Obs_consequence:</b>Have you ever observed negative consequences in the workplace for someone else who disclosed their mental health condition, such as being treated unfairly or overlooked for opportunities?<br></br>
-                            <b> 6. Anonymity:</b> Is your privacy and confidentiality maintained if you choose to take advantage of mental health or substance abuse treatment resources?<br></br>
-                            <b> 7. Mental_health_interview:</b> Would you like to bring up any mental health issues with a potential employer in an interview?<br></br>
-                            <b> 8. Wellness_program:</b> Does your employer or organization offer a wellness program or any health-related initiatives to you?<br></br>
-                            <b> 9. Seek_help:</b> Does your employer or organization provide any resources to learn more about mental_health issues and have you ever sought help or support for a mental health concern?<br></br>
-                        </p>
+                    
+                    <div className="container">
+
+                        <div className="feature">
+                            <p style={{ textAlign: "left" }}>
+                                <b> 1. Work_interfere:</b> If you have any mental health condition , do you feel this mental health condition interfered with your ability to work?<br></br>
+                                <b> 2. Family_history:</b> Do you have any family members (such as parents or siblings) who have been diagnosed with a mental health condition?<br></br>
+                                <b> 3. Care_options:</b> Does your employer or organization offer any mental health care option for employees?<br></br>
+                                <b> 4. Benefits:</b> Does your employer or organization offer any mental health benefits to you, such as counselling or therapy services?<br></br>
+                                <b> 5. Obs_consequence:</b> Have you ever observed negative consequences in the workplace for someone else who disclosed their mental health condition, such as being treated unfairly or overlooked for opportunities?<br></br>
+                            </p>
+                        </div>
+
+                        <div className="feature">
+                            <p style={{ textAlign: "left" }}>
+                                <b> 6. Anonymity:</b> Is your privacy and confidentiality maintained if you choose to take advantage of mental health or substance abuse treatment resources?<br></br>
+                                <b> 7. Mental_health_interview:</b> Would you like to bring up any mental health issues with a potential employer in an interview?<br></br>
+                                <b> 8. Wellness_program:</b> Does your employer or organization offer a wellness program or any health-related initiatives to you?<br></br>
+                                <b> 9. Seek_help:</b> Does your employer or organization provide any resources to learn more about mental_health issues and have you ever sought help or support for a mental health concern?<br></br>
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
+
             <div><p style={{ color: "#880e4f", fontSize: "20px", position: "left" }}><u><b>Please Fill The Below Details For Predict Your Mental Health</b></u></p></div>
                 
                 <form onSubmit={handleSubmit} >
+
                     <Grid container alignItems="center" justifyContent="center"  direction="column" item position="left">
                         
                         {/* PERSONAL DETAILS */}
