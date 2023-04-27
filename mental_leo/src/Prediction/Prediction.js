@@ -102,19 +102,19 @@ const Prediction = () => {
                         <div>
                             <p style={{ color: "#14212e", fontSize: "20px",position:"left" }}><b>Name</b></p>
                             <Box sx={{width:500,maxWidth: '100%',}}>
-                                <TextField id="name" name="name"  fullWidth label="Enter Your Name" />
+                                <TextField id="name" name="name" value={formValues.name} onChange={handleInputChange} fullWidth label="Enter Your Name" />
                             </Box>
                             <p style={{ color: "#14212e", fontSize: "20px", position: "left" }}><b>Email ID</b></p>
                             <Box sx={{ width: 500, maxWidth: '100%', }}>
-                                <TextField id="email" name="email"  fullWidth label="Enter Your Email id" />
+                                <TextField id="email" name="email" value={formValues.email} onChange={handleInputChange} fullWidth label="Enter Your Email id" />
                             </Box>
                             <p style={{ color: "#14212e", fontSize: "20px", position: "left" }}><b>Age</b></p>
                             <Box sx={{ width: 500, maxWidth: '100%' }}>
-                                <TextField id="age" name="age" fullWidth label="Enter Your Age" />
+                                <TextField id="age" name="age" value={formValues.age} onChange={handleInputChange} fullWidth label="Enter Your Age" />
                             </Box>
                             <p style={{ color: "#14212e", fontSize: "20px", position: "left" }}><b>Country</b></p>
                             <Box sx={{ width: 500, maxWidth: '100%' }}>
-                                <TextField id="country" name="country"  fullWidth label="Enter Your Country" />
+                                <TextField id="country" name="country" value={formValues.country} onChange={handleInputChange}  fullWidth label="Enter Your Country" />
                             </Box>
                             <Grid item>
                                 <FormControl>
