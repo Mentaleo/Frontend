@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css"
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
-
+import image1 from './image1.jpg';
 
 const About = () => {
 
@@ -28,34 +28,34 @@ const About = () => {
             <div className="container">
 
                 <div className="person">
-                    <img src="image1.jpg" alt="Person 1" width="5" height="5" />
-                    <h4>BIYATRA GHOSH</h4>
-                    <a href="mailto:biyatraghosh13@gmail.com" style={{ color: 'red', border: '3px solid black', lineHeight: '4.0' }}>
+                    <div><img src={image1} alt="Person 1" height={"250px"} width={"250px"}/></div>
+                    <h2 style={{fontFamily: 'BlinkMacSystemFont' }}>BIYATRA GHOSH</h2>
+                    <a href="mailto:biyatraghosh13@gmail.com" style={{ color: '#BE0027',  lineHeight: '4.0' }}>
                         <FaEnvelope /> Email
                     </a><br></br>
-                    <a href="https://www.linkedin.com/in/biyatra-ghosh-b14128208" style={{ color: 'red', border: '3px solid black' }}>
+                    <a href="https://www.linkedin.com/in/biyatra-ghosh-b14128208" style={{ color: '#0C4E98' }}>
                         <FaLinkedin /> LinkedIn
                     </a>
                 </div>
 
                 <div className="person">
                     <img src="person2.jpg" alt="Person 2" />
-                    <h4>HARSHA PATI</h4>
-                    <a href="mailto:harshapati896@gmail.com" style={{ color: 'red', border: '3px solid black', lineHeight: '4.0' }}>
+                    <h2 style={{ fontFamily: 'BlinkMacSystemFont' }}>HARSHA PATI</h2>
+                    <a href="mailto:harshapati896@gmail.com" style={{ color: '#BE0027',  lineHeight: '4.0' }}>
                         <FaEnvelope /> Email
                     </a><br></br>
-                    <a href="https://www.linkedin.com/in/harsha-pati-984298200" style={{ color: 'red', border: '3px solid black' }}>
+                    <a href="https://www.linkedin.com/in/harsha-pati-984298200" style={{ color: '#0C4E98' }}>
                         <FaLinkedin /> LinkedIn
                     </a>
                 </div>
 
                 <div className="person">
                     <img src="image1.jpg" alt="Person 3" />
-                    <h4>TAPABRATA ROY</h4>
-                    <a href="mailto:tapabrataroy675@gmail.com" style={{ color: 'red', border: '3px solid black', lineHeight: '4.0' }}>
+                    <h2 style={{ fontFamily: 'BlinkMacSystemFont' }}>TAPABRATA ROY</h2>
+                    <a href="mailto:tapabrataroy675@gmail.com" style={{ color: '#BE0027', lineHeight: '4.0' }}>
                         <FaEnvelope /> Email
                     </a><br></br>
-                    <a href="https://www.linkedin.com/in/tapabrata-roy-90981a211" style={{ color: 'red', border: '3px solid black' }}>
+                    <a href="https://www.linkedin.com/in/tapabrata-roy-90981a211" style={{ color: '#0C4E98' }}>
                         <FaLinkedin /> LinkedIn
                     </a>
                 </div>
