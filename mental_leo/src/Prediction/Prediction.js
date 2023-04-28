@@ -40,7 +40,29 @@ const Prediction = () => {
         });
     };
 
+    const [showResponse, setShowResponse] = useState(false);
+    const [showwarn, setshowwarn] = useState(false);
+
     const handleSubmit = (event) => {
+        if (!formValues.name || 
+            !formValues.email || 
+            !formValues.age || 
+            !formValues.country || 
+            !formValues.gender || 
+            !formValues.work_interfere || 
+            !formValues.family_history || 
+            !formValues.care_options || 
+            !formValues.benefits || 
+            !formValues.obs_consequence || 
+            !formValues.anonymity || 
+            !formValues.mental_health_interview || 
+            !formValues.wellness_program || 
+            !formValues.seek_help) {
+            setshowwarn(true);
+            setTimeout(() => {
+              setshowwarn(false);
+            }, 10000);
+        }
         event.preventDefault();
         const formValuesToSend = {
             "name": formValues.name,
@@ -70,7 +92,10 @@ const Prediction = () => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            setShowResponse(true);
+            setTimeout(() => {
+              setShowResponse(false);
+            }, 10000);
         })
         .catch(error => console.error(error));
     };
@@ -525,6 +550,21 @@ const Prediction = () => {
                         <Button variant="contained" color="primary" type="submit">
                             PREDICT
                         </Button>
+                        {showResponse && (
+                        <div>
+                        <p id="response" style={{backgroundColor: '#F8D7DA', color: '#721C24', padding: '10px', borderRadius: '5px', fontWeight: 'bold'}}>
+                          Mail has been sent to your email address
+                        </p>
+                      </div>
+                        )}
+                        {showwarn && (
+                        <div>
+                        <p id="warn" style={{backgroundColor: '#F8D7DA', color: '#721C24', padding: '10px', borderRadius: '5px', fontWeight: 'bold'}}>
+                          Please fill all the details for the result
+                        </p>
+                      </div>
+                      
+                        )}
                 </Grid>
             </form>
         </div>
