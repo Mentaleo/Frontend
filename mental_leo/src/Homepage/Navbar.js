@@ -35,9 +35,9 @@ function Navbar() {
             MENTALEO
           </Typography>
           <Nav>
-            <Nav.Link href="/#visualization" style={{ fontWeight: 700, color: "#fff", textDecoration: "None", padding: "0 3vw", fontFamily: '"Apple Color Emoji"', }}><b>VISUALIZATION</b></Nav.Link>
-            <Nav.Link href="/#prediction" style={{ fontWeight: 700, color: "#fff", textDecoration: "None", paddingRight: "3vw", fontFamily: '"Apple Color Emoji"', }}><b>PREDICTION</b></Nav.Link>
-            <Nav.Link href="/#aboutus" style={{ fontWeight: 700, color: "#fff", textDecoration: "None", paddingRight: "3vw", fontFamily: '"Apple Color Emoji"', }}><b>ABOUT US</b></Nav.Link>
+            <Nav.Link href="/#visualization" style={{ fontWeight: 700, color: "#fff", textDecoration: "None", padding: "0 3vw", fontFamily: '"Apple Color Emoji"', letterSpacing: '.1rem' }}><b>VISUALIZATION</b></Nav.Link>
+            <Nav.Link href="/#prediction" style={{ fontWeight: 700, color: "#fff", textDecoration: "None", paddingRight: "3vw", fontFamily: '"Apple Color Emoji"', letterSpacing: '.1rem' }}><b>PREDICTION</b></Nav.Link>
+            <Nav.Link href="/#aboutus" style={{ fontWeight: 700, color: "#fff", textDecoration: "None", paddingRight: "3vw", fontFamily: '"Apple Color Emoji"', letterSpacing: '.1rem' }}><b>ABOUT US</b></Nav.Link>
           </Nav>          
         </Toolbar>
       </Container>

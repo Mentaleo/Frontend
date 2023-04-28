@@ -281,7 +281,7 @@ function Visualization() {
         <React.Fragment>
             <div style={{ backgroundColor: '#bdbdbd', paddingTop: "10vh" }} id="visualization">
                 
-                <h1 style={{ color: "#26c6da", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::WELCOME TO THE VISUALIZATION PAGE:: </h1>
+                <h1 style={{ color: "#D8D184", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::WELCOME TO THE VISUALIZATION PAGE:: </h1>
                     
                     {/* GRAPH FOR GENDERWISE */}
                     <div >

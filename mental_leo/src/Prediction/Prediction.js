@@ -42,14 +42,44 @@ const Prediction = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formValues);
+        const formValuesToSend = {
+            "name": formValues.name,
+            "age": formValues.age,
+            "email": formValues.email,
+            "gender": formValues.gender,
+            "country": formValues.country,
+            "work_interfere": formValues.work_interfere,
+            "family_history": formValues.family_history,
+            "care_options": formValues.care_options,
+            "benefits": formValues.benefits,
+            "obs_consequence": formValues.obs_consequence,
+            "anonymity": formValues.anonymity,
+            "mental_health_interview": formValues.mental_health_interview,
+            "wellness_program": formValues.wellness_program,
+            "seek_help": formValues.seek_help
+        };
+        console.log(JSON.stringify(formValuesToSend))
+        fetch('http://localhost:5000/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            mode: 'cors',
+            credentials: 'same-origin',
+            body: JSON.stringify(formValuesToSend)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => console.error(error));
     };
 
     return (
         
         <div style={{ backgroundColor: '#bdbdbd', paddingTop: "10vh" }} id="prediction">
 
-           <h1 style={{ color: "#26c6da", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::WELCOME TO THE PREDICTION PAGE:: </h1>
+            <h1 style={{ color: "#D8D184", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::WELCOME TO THE PREDICTION PAGE:: </h1>
 
             <div>
                 <p style={{ fontSize: "15px", textAlign: "left" }}><b>

@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css"
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import image1 from './image1.jpg';
+import image3 from './image3.jpg';
 
 const About = () => {
 
@@ -9,7 +10,7 @@ const About = () => {
 
         <div style={{ backgroundColor: '#bdbdbd', paddingTop: "10vh" }} id="aboutus">
 
-            <h1 style={{ color: "#26c6da", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::ABOUT US:: </h1>
+            <h1 style={{ color: "#D8D184", backgroundColor: "#14212e", fontFamily: 'BlinkMacSystemFont' }}>::ABOUT US:: </h1>
 
             <p style={{ textAlign: "left",fontSize:"15px"}}><b>
                 Welcome to our mental health project. We are a team of dedicated individuals with a keen interest in
@@ -50,7 +51,7 @@ const About = () => {
                 </div>
 
                 <div className="person">
-                    <img src="image1.jpg" alt="Person 3" />
+                    <div><img src={image3} alt="Person 3" height={"250px"} width={"250px"} /></div>
                     <h2 style={{ fontFamily: 'BlinkMacSystemFont' }}>TAPABRATA ROY</h2>
                     <a href="mailto:tapabrataroy675@gmail.com" style={{ color: '#BE0027', lineHeight: '4.0' }}>
                         <FaEnvelope /> Email
