@@ -60,9 +60,9 @@ const About = () => {
                         <FaLinkedin /> LinkedIn
                     </a>
                 </div>
-
+                
             </div>
-
+            
         </div>
     );
 
