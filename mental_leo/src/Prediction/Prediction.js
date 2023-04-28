@@ -68,11 +68,11 @@ const Prediction = () => {
             credentials: 'same-origin',
             body: JSON.stringify(formValuesToSend)
         })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => console.error(error));
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => console.error(error));
     };
 
     return (
@@ -204,7 +204,7 @@ const Prediction = () => {
                                     >
                                         <FormControlLabel
                                             key="don't know"
-                                            value="don't know"
+                                            value="don't Know"
                                             control={<Radio size="small" />}
                                             label="Don't Know"
                                             style={{ color: "#263238", fontSize: "10px" }}
@@ -298,8 +298,8 @@ const Prediction = () => {
                                             style={{ color: "#263238", fontSize: "10px" }}
                                         />
                                         <FormControlLabel
-                                            key="Don't Know"
-                                            value="Don't Know"
+                                            key="don't Know"
+                                            value="don't Know"
                                             control={<Radio size="small" />}
                                             label="Don't Know"
                                             style={{ color: "#263238", fontSize: "10px" }}
@@ -335,8 +335,8 @@ const Prediction = () => {
                                             style={{ color: "#263238", fontSize: "10px" }}
                                         />
                                         <FormControlLabel
-                                            key="don't know"
-                                            value="don't know"
+                                            key="don't Know"
+                                            value="don't Know"
                                             control={<Radio size="small" />}
                                             label="Don't Know"
                                             style={{ color: "#263238", fontSize: "10px" }}
@@ -403,7 +403,7 @@ const Prediction = () => {
                                         />
                                         <FormControlLabel
                                             key="don't know"
-                                            value="don't know"
+                                            value="don't Know"
                                             control={<Radio size="small" />}
                                             label="Don't Know"
                                             style={{ color: "#263238", fontSize: "10px" }}
@@ -440,7 +440,7 @@ const Prediction = () => {
                                         />
                                         <FormControlLabel
                                             key="don't know"
-                                            value="don't know"
+                                            value="don't Know"
                                             control={<Radio size="small" />}
                                             label="Don't Know"
                                             style={{ color: "#263238", fontSize: "10px" }}
@@ -477,7 +477,7 @@ const Prediction = () => {
                                         />
                                         <FormControlLabel
                                             key="don't know"
-                                            value="don't know"
+                                            value="don't Know"
                                             control={<Radio size="small" />}
                                             label="Don't Know"
                                             style={{ color: "#263238", fontSize: "10px" }}
@@ -514,7 +514,7 @@ const Prediction = () => {
                                         />
                                         <FormControlLabel
                                             key="don't know"
-                                            value="don't know"
+                                            value="don't Know"
                                             control={<Radio size="small" />}
                                             label="Don't Know"
                                             style={{ color: "#263238", fontSize: "10px" }}
