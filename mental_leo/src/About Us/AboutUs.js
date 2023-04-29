@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css"
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import image1 from './image1.jpg';
+import image2 from './image2.jpg';
 import image3 from './image3.jpg';
 
 const About = () => {
@@ -29,7 +30,7 @@ const About = () => {
             <div className="container">
 
                 <div className="person">
-                    <div><img src={image1} alt="Person 1" height={"250px"} width={"250px"}/></div>
+                    <div><img src={image1} alt="Person 1" height={"250px"} width={"250px"} border={"2px solid black"} /></div>
                     <h2 style={{fontFamily: 'BlinkMacSystemFont' }}>BIYATRA GHOSH</h2>
                     <a href="mailto:biyatraghosh13@gmail.com" style={{ color: '#BE0027',  lineHeight: '4.0' }}>
                         <FaEnvelope /> Email
@@ -40,7 +41,7 @@ const About = () => {
                 </div>
 
                 <div className="person">
-                    <img src="person2.jpg" alt="Person 2" />
+                    <div><img src={image2} alt="Person 2" height={"250px"} width={"250px"} border={"2px solid black"}/></div>
                     <h2 style={{ fontFamily: 'BlinkMacSystemFont' }}>HARSHA PATI</h2>
                     <a href="mailto:harshapati896@gmail.com" style={{ color: '#BE0027',  lineHeight: '4.0' }}>
                         <FaEnvelope /> Email
