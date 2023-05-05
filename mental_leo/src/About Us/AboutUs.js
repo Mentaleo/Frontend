@@ -4,6 +4,7 @@ import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import image1 from './image1.jpg';
 import image2 from './image2.jpg';
 import image3 from './image3.jpg';
+import image4 from './image4.jpeg';
 
 const About = () => {
 
@@ -62,7 +63,18 @@ const About = () => {
                     </a>
                 </div>
                 
+                <div className="person1">
+                    <p style={{ fontFamily: 'BlinkMacSystemFont' }}><b>This Work Evaluated By </b></p>
+                    <div><img src={image4} alt="Person 4" height={"200px"} width={"200px"} /></div>
+                    <h2 style={{ fontFamily: 'BlinkMacSystemFont' }}>Dr. Rajdeep Chatterjee</h2>
+                    <a href="mailto:rajdeepfcs@kiit.ac.in" style={{ color: '#BE0027', lineHeight: '4.0' }}>
+                        <FaEnvelope /> Email
+                    </a><br></br>
+                    
+                </div>
+
             </div>
+            
             
         </div>
     );
